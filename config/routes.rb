@@ -10,4 +10,8 @@ Rails.application.routes.draw do
   get 'testusers', to: 'testusers#index'
   get 'testusers/:id', to: 'testusers#show'
   post 'testusers', to: 'testusers#new'
+
+  post 'signup', to: 'users#create'
+  post 'login', to: 'user_sessions#create'
+  delete 'logout', to: 'user_sessions#destroy'
 end

@@ -1,5 +1,5 @@
 class TestusersController < ApplicationController
-  protect_from_forgery with: :null_session
+  before_action :authorized
 
   def index
     testusers = TestUser.all
